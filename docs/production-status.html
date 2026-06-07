@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Production Status - ThanConnect Library</title>
+  <style>
+    :root{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#172033;background:#f5f7fb}body{margin:0;padding:18px}.wrap{max-width:980px;margin:0 auto}.hero{background:#101828;color:white;border-radius:24px;padding:24px;margin-bottom:16px}.hero h1{margin:0 0 8px;font-size:28px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}.card{background:white;border:1px solid #e6eaf2;border-radius:18px;padding:16px;box-shadow:0 10px 24px rgba(15,23,42,.06)}.ok{color:#027a48}.warn{color:#b54708}.no{color:#b42318}.pill{display:inline-block;border-radius:999px;padding:4px 9px;background:#ecfdf3;color:#027a48;font-size:12px;font-weight:800}.btn{display:inline-block;margin-top:12px;background:#2563eb;color:white;text-decoration:none;border-radius:12px;padding:11px 14px;font-weight:800}.muted{color:#667085}.list{line-height:1.8;padding-left:20px}@media(max-width:700px){body{padding:12px}.hero{padding:18px;border-radius:18px}.hero h1{font-size:23px}.grid{grid-template-columns:1fr}.card{border-radius:16px;padding:14px}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <span class="pill">Production Readiness</span>
+      <h1>ThanConnect Ebook Library</h1>
+      <p>หน้านี้ใช้ตรวจสถานะงาน Production ที่ deploy แล้วบน GitHub Pages</p>
+      <a class="btn" href="./">กลับหน้าแอป</a>
+    </section>
+    <section class="grid">
+      <div class="card"><h2>Database</h2><p class="ok">✅ Supabase schema พร้อมใช้</p><p class="muted">profiles, books, user_library, reading_progress, bookmarks, reader_events</p></div>
+      <div class="card"><h2>Security</h2><p class="ok">✅ Row Level Security พร้อมใช้</p><p class="muted">reader เห็นข้อมูลตัวเอง, librarian/admin จัดการข้อมูลตามสิทธิ์</p></div>
+      <div class="card"><h2>Auth</h2><p class="ok">✅ Auth service พร้อมเชื่อม Supabase</p><p class="muted">Email, Register, Google OAuth, session, profile</p></div>
+      <div class="card"><h2>Books</h2><p class="ok">✅ Books service พร้อมใช้</p><p class="muted">ค้นหา เพิ่ม แก้ไข archive ลบ และหมวดหมู่</p></div>
+      <div class="card"><h2>Library</h2><p class="ok">✅ Borrow/Return service พร้อมใช้</p><p class="muted">ยืม คืน อ่านจบ archive และ admin loan list</p></div>
+      <div class="card"><h2>Progress</h2><p class="ok">✅ Progress service พร้อมใช้</p><p class="muted">บันทึกหน้า เปอร์เซ็นต์ อ่านจบ และ event</p></div>
+      <div class="card"><h2>Bookmarks</h2><p class="ok">✅ Bookmark service พร้อมใช้</p><p class="muted">สร้าง แก้ไข ลบ และผูก analytics</p></div>
+      <div class="card"><h2>Frontend Integration</h2><p class="warn">⚠️ ขั้นถัดไป</p><p class="muted">เชื่อม React UI เข้ากับ Supabase service layer</p></div>
+    </section>
+    <section class="card" style="margin-top:16px">
+      <h2>ไฟล์ Production ที่ Deploy ใน Repository แล้ว</h2>
+      <ul class="list">
+        <li>supabase/schema.sql</li>
+        <li>src/lib/supabase.js</li>
+        <li>src/services/auth.js</li>
+        <li>src/services/books.js</li>
+        <li>src/services/library.js</li>
+        <li>src/services/progress.js</li>
+        <li>src/services/bookmarks.js</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
